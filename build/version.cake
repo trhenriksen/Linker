@@ -8,13 +8,8 @@ public static string ReadVersionFromProjectFile(ICakeContext context)
 {
     var versionNode = "/Project/PropertyGroup/Version/text()";
 
-    return context.XmlPeek(
-        Paths.ProjectFile,
-        versionNode,
-        new XmlPeekSettings
-        {
-            SuppressWarning = true
-        });
+    // TODO: return the content of the version node in the project file
+    return null;
 }
 
 public static bool LatestCommitHasVersionTag(this ICakeContext context)
